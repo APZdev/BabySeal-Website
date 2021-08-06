@@ -104,7 +104,7 @@ function LastNftSection() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <LastNftText>{`Check Opensea #${value[1]}`}</LastNftText>
+                    <LastNftText>{`Check OpenSea #${value[1]}`}</LastNftText>
                   </a>
                 </LastNftItem>
               );

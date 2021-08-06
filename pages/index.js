@@ -154,7 +154,7 @@ export default function Home() {
     <AppContext.Provider value={propsTest}>
       <div className="base">
         <Head>
-          <title>Pixelman NFT&apos;s</title>
+          <title>PixelMan NFT&apos;s</title>
           <link rel="shortcut icon" href="/pixel_man.ico" />
         </Head>
         <PageContainer>
@@ -190,7 +190,7 @@ export default function Home() {
                 <TextArea />
               </TextAreaContainer>
             </HashSection>
-            <SmallTitle>Pixelman Record</SmallTitle>
+            <SmallTitle>PixelMan Record</SmallTitle>
             <RecordTable />
           </PageBody>
           <MintTransactionModal />

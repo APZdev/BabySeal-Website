@@ -1,6 +1,8 @@
 {
   "ContractAddress": "0x14b22925305E60e0707Aaa1319aF09F4d2f1E646",
   "NetworkId": "137",
+  "NftUnitPrice": "1",
+  "CurrencyName": "Matic",
   "NftImageLink": "https://gateway.pinata.cloud/ipfs/QmapKXeTEYFZNTpXhQWZ7yrjPnzLnnCuA16FyZXMHv5tLz/",
   "NftImageExtension": ".png",
   "NftOpenseaLink": "https://opensea.io/assets/matic/0x14b22925305e60e0707aaa1319af09f4d2f1e646/",

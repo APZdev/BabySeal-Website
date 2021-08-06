@@ -253,15 +253,19 @@ function PageMainField() {
 
   const checkBlockchainData = async () => {
     if (typeof web3 !== "undefined") {
-      window.web3 = new Web3(window.web3.currentProvider);
+      try {
+        window.web3 = new Web3(window.web3.currentProvider);
 
-      const networkId = await window.web3.eth.net.getId();
-      setIsRightNetwork(
-        networkId == WebsiteParamaters.NetworkId ? true : false
-      );
+        const networkId = await window.web3.eth.net.getId();
+        setIsRightNetwork(
+          networkId == WebsiteParamaters.NetworkId ? true : false
+        );
 
-      const accounts = await window.web3.eth.getAccounts();
-      setConnectedState(accounts.length > 0);
+        const accounts = await window.web3.eth.getAccounts();
+        setConnectedState(accounts.length > 0);
+      } catch (err) {
+        console.log(err);
+      }
     } else {
       setConnectedState(false);
     }
@@ -319,7 +323,7 @@ function PageMainField() {
 
   return (
     <PageIntro>
-      <PageName>Pixelman NFT&apos;s</PageName>
+      <PageName>PixelMan NFT&apos;s</PageName>
       <PresentationText>
         PixelMan is a collection of NFTs - unique digital collectibles, swimming
         on the Ethereum Blockchain. 3350 pixelmens have been programmatically
@@ -334,7 +338,7 @@ function PageMainField() {
           if (totalSupply == -1 || maxMintedAmount == -1) {
             return "0/0 minted";
           } else {
-            return `${totalSupply}/${maxMintedAmount} minted`;
+            return `${totalSupply}/${maxMintedAmount} Minted`;
           }
         })()}
       </MintedCounter>
@@ -347,7 +351,7 @@ function PageMainField() {
               return (
                 <div>
                   <MetamaskButtonDisplay />
-                  <PriceText>Price : 1 Matic</PriceText>
+                  <PriceText>{`Price : ${WebsiteParamaters.NftUnitPrice} ${WebsiteParamaters.CurrencyName}`}</PriceText>
                   <QuantityText>Quantity</QuantityText>
                   <QuantitySelectorContainer>
                     <DecrementQuantityButton onClick={decrement}>

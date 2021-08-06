@@ -73,11 +73,17 @@ function MetamaskButtonDisplay() {
     React.useContext(AppContext);
 
   const connectToWallet = async () => {
-    window.web3 = new Web3(window.web3.currentProvider);
-    await window.ethereum.enable();
+    if (typeof web3 !== "undefined") {
+      try {
+        window.web3 = new Web3(window.web3.currentProvider);
+        await window.ethereum.enable();
 
-    const accounts = await window.web3.eth.getAccounts();
-    setAccountAddress(accounts[0]);
+        const accounts = await window.web3.eth.getAccounts();
+        setAccountAddress(accounts[0]);
+      } catch (err) {
+        console.log(err);
+      }
+    }
   };
   connectToWallet();
 
