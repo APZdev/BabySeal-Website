@@ -152,9 +152,9 @@ export default function Home() {
 
   return (
     <AppContext.Provider value={propsTest}>
-      <div class="base">
+      <div className="base">
         <Head>
-          <title>Pixelman NFT's</title>
+          <title>Pixelman NFT&apos;s</title>
           <link rel="shortcut icon" href="/pixel_man.ico" />
         </Head>
         <PageContainer>

@@ -272,7 +272,7 @@ function PageMainField() {
       checkBlockchainData();
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   const getMaxMintedAmount = async () => {
     try {
@@ -319,7 +319,7 @@ function PageMainField() {
 
   return (
     <PageIntro>
-      <PageName>Pixelman NFT's</PageName>
+      <PageName>Pixelman NFT&apos;s</PageName>
       <PresentationText>
         PixelMan is a collection of NFTs - unique digital collectibles, swimming
         on the Ethereum Blockchain. 3350 pixelmens have been programmatically

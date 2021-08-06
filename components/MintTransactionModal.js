@@ -137,11 +137,11 @@ function MintTransactionModal() {
         >
           <OpenseaModalButtonText>Check on OpenSea</OpenseaModalButtonText>
           <RightArrowImageContainer>
-            <Image width="20px" height="20px" src={RightArrow}></Image>
+            <Image width="20px" height="20px" alt="pixelman" src={RightArrow}></Image>
           </RightArrowImageContainer>
         </OpenseaModalButton>
         <CloseButtonIconContainer onClick={() => setMintModalEnabled(false)}>
-          <Image width="15px" height="15px" src={Cross}></Image>
+          <Image width="15px" height="15px" alt="pixelman" src={Cross}></Image>
         </CloseButtonIconContainer>
       </ModalContainer>
     </ModalBackground>

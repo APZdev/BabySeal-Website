@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import React, { useState, useEffect } from "react";
 import { AppContext } from "../pages/index.js";
 
@@ -89,11 +91,13 @@ function LastNftSection() {
               return (
                 <LastNftItem key={index}>
                   <a href={value[0]} target="_blank" rel="noreferrer">
-                    <img
+                    <Image
                       className="lastNftItem"
+                      width="150px"
+                      height="150px"
                       src={value[0]}
                       alt="nft-item"
-                    ></img>
+                    ></Image>
                   </a>
                   <a
                     href={`${WebsiteParamaters.NftOpenseaLink}${value[1]}`}
