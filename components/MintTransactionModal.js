@@ -32,7 +32,7 @@ const ModalContainer = styled.div`
   align-items: center;
   flex-direction: column;
   width: 570px;
-  height: 375px;
+  height: 400px;
   background-color: #2d2d2d;
   box-shadow: 3px 3px 10px black;
   border-radius: 15px;
@@ -111,6 +111,14 @@ const RightArrowImageContainer = styled.div`
   user-select: none;
 `;
 
+const InformatonText = styled.div`
+  color: #9c9c9c;
+  font-size: 0.8em;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 40px;
+`;
+
 function MintTransactionModal() {
   const { mintModalEnabled, setMintModalEnabled, modalTxHash } =
     React.useContext(AppContext);
@@ -145,6 +153,9 @@ function MintTransactionModal() {
             ></Image>
           </RightArrowImageContainer>
         </OpenseaModalButton>
+        <InformatonText>
+          Your NFT might take few minutes to appear on OpenSea
+        </InformatonText>
         <CloseButtonIconContainer onClick={() => setMintModalEnabled(false)}>
           <Image width="15px" height="15px" alt="babyseal" src={Cross}></Image>
         </CloseButtonIconContainer>
