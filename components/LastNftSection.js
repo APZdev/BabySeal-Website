@@ -15,9 +15,10 @@ const LastNftTitle = styled.div`
 `;
 
 const LastNftContainer = styled.div`
+  display: ${(props) =>
+    parseInt(props.supply) < 10 || !props.networkState ? "none" : "flex"};
   margin-top: 30px;
   width: 100%;
-  display: ${(props) => (parseInt(props.state) < 10 ? "none" : "flex")};
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -72,10 +73,10 @@ const LastNftItem = styled.div`
 
 function LastNftSection() {
   let [lastNftItems, setLastNftItems] = useState([]);
-  const { totalSupply } = React.useContext(AppContext);
+  const { totalSupply, isRightNetwork } = React.useContext(AppContext);
 
   return (
-    <LastNftContainer state={totalSupply}>
+    <LastNftContainer supply={totalSupply} networkState={isRightNetwork}>
       <LastNftTitle>Last 10 Minted</LastNftTitle>
       <LastNftGrid>
         {useEffect(() => {

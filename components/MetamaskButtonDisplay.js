@@ -89,7 +89,7 @@ function MetamaskButtonDisplay() {
 
   if (isConnected) {
     return isRightNetwork ? (
-      <RightNetworkButton>Connected to Matic</RightNetworkButton>
+      <RightNetworkButton>{`Connected to ${WebsiteParamaters.NetworkName}`}</RightNetworkButton>
     ) : (
       <WrongNetworkButton>{`Wrong Network, Connect to ${WebsiteParamaters.NetworkName}`}</WrongNetworkButton>
     );

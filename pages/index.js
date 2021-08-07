@@ -117,7 +117,7 @@ export default function Home() {
   let [isConnected, setConnectedState] = useState(false);
   let [accountAddress, setAccountAddress] = useState("");
   let [isRightNetwork, setIsRightNetwork] = useState(false);
-  let [totalSupply, setTotalSupply] = useState(10);
+  let [totalSupply, setTotalSupply] = useState(-1);
   let [mintModalEnabled, setMintModalEnabled] = useState(false);
   let [modalTxHash, setModalTxHash] = useState("");
 
