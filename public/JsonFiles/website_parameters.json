@@ -1,6 +1,7 @@
 {
   "ContractAddress": "0x14b22925305E60e0707Aaa1319aF09F4d2f1E646",
   "NetworkId": "137",
+  "NetworkName": "Polygon",
   "NftUnitPrice": "1",
   "CurrencyName": "Matic",
   "NftImageLink": "https://gateway.pinata.cloud/ipfs/QmapKXeTEYFZNTpXhQWZ7yrjPnzLnnCuA16FyZXMHv5tLz/",

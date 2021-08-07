@@ -30,9 +30,11 @@ const LastNftText = styled.div`
   color: #ffffff;
   font-size: 1em;
   font-weight: bold;
+  transition: 0.35s;
 
   &:hover {
-    opacity: 0.75;
+    transition: 0.35s;
+    color: #fef699;
   }
 `;
 
@@ -60,9 +62,10 @@ const LastNftItem = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: 0.25s;
 
   &:hover {
-    opacity: 0.7;
+    transform: scale(1.05);
     transition: 0.25s;
   }
 `;

@@ -1,10 +1,18 @@
+@font-face {
+  font-family: "pixelFont";
+  src: url("/fonts/pixelFont.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 html,
 body,
 h1 {
   padding: 0;
   margin: 0;
   background-color: #000000;
-  font-family: Segoe UI, Arial, Helvetica, sans-serif;
+  font-family: pixelFont, Segoe UI, Arial, Helvetica, sans-serif;
 }
 
 input:focus,
@@ -40,7 +48,7 @@ input[type="number"] {
 }
 
 .introImage {
-  border-radius: 10%;
+  border-radius: 1%;
 }
 
 .socialImage {
@@ -48,7 +56,7 @@ input[type="number"] {
 }
 
 .lastNftItem {
-  border-radius: 10%;
+  border-radius: 2.5%;
 }
 
 /* The Close Button */

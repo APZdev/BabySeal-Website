@@ -156,6 +156,12 @@ export default function Home() {
         <Head>
           <title>PixelMan NFT&apos;s</title>
           <link rel="shortcut icon" href="/pixel_man.ico" />
+          <link
+            rel="preload"
+            href="/fonts/pixelFont.ttf"
+            as="font"
+            crossOrigin=""
+          />
         </Head>
         <PageContainer>
           <IntroContainer>

@@ -106,54 +106,63 @@ const QuantitySelectorContainer = styled.div`
 `;
 
 const DecrementQuantityButton = styled.div`
-  width: 40px;
+  width: 50px;
   height: 100%;
-  background-color: #fa3c6b;
+  background-color: #000000;
+  border-right: 4px solid;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  border-left: 4px solid;
+  border-color: #fa3c6b;
   text-align: center;
   vertical-align: middle;
   color: white;
   user-select: none;
 
-  padding-top: 11px;
-  font-size: 0.9em;
+  padding-top: 10px;
+  font-size: 0.7em;
   font-weight: 900;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
 
   &:hover {
     cursor: pointer;
-    opacity: 0.85;
+    border-color: #67c7d0;
     transition: 0.35s;
   }
 `;
 
 const IncrementQuantityButton = styled.div`
-  width: 40px;
+  width: 50px;
   height: 100%;
-  background-color: #fa3c6b;
+  background-color: #000000;
+  border-right: 4px solid;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  border-left: 4px solid;
+  border-color: #fa3c6b;
   text-align: center;
   vertical-align: middle;
   color: white;
   user-select: none;
 
-  padding-top: 4px;
+  padding-top: 1px;
   font-size: 1.5em;
   font-weight: 900;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
 
   &:hover {
     cursor: pointer;
-    opacity: 0.85;
+    border-color: #67c7d0;
     transition: 0.35s;
   }
 `;
 
 const QuantityInput = styled.input.attrs({ type: "number" })`
-  width: 160px;
+  width: 140px;
   height: 100%;
-  background-color: #fa3c6b;
+  background-color: #000000;
   border: 0;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  border-color: #fa3c6b;
 
   color: white;
   font-size: 1.2em;
@@ -162,19 +171,20 @@ const QuantityInput = styled.input.attrs({ type: "number" })`
 
   &:hover {
     cursor: pointer;
-    opacity: 0.85;
+    border-color: #67c7d0;
     transition: 0.35s;
   }
 `;
 
 const MintNFTButton = styled.div`
-  background-color: #fa3c6b;
+  background-color: #000000;
+  border: 4px solid;
+  color: #fa3c6b;
+  border-color: #fa3c6b;
   margin-top: 20px;
   padding: 0.8em 1em;
-  border-radius: 30px;
   width: 15em;
 
-  color: #ffffff;
   font-size: 1em;
   font-weight: bold;
   text-align: center;
@@ -182,7 +192,8 @@ const MintNFTButton = styled.div`
 
   &:hover {
     cursor: pointer;
-    background-color: #67c7d0;
+    border-color: #67c7d0;
+    color: #67c7d0;
     transition: 0.35s;
   }
 `;
@@ -312,7 +323,7 @@ function PageMainField() {
           from: `${accountAddress}`,
           value: (quantity * nftFixedPrice * 10 ** 18).toString(),
         })
-        .on("receipt", function (events) {
+        .on("receipt", (events) => {
           setModalTxHash(events.transactionHash);
           setMintModalEnabled(true);
         });
@@ -333,15 +344,6 @@ function PageMainField() {
       <MarketingText>
         Own a PixelMan and raise the crypto revolution.
       </MarketingText>
-      <MintedCounter>
-        {(() => {
-          if (totalSupply == -1 || maxMintedAmount == -1) {
-            return "0/0 minted";
-          } else {
-            return `${totalSupply}/${maxMintedAmount} Minted`;
-          }
-        })()}
-      </MintedCounter>
       {(() => {
         if ((totalSupply == -1 || maxMintedAmount == -1) && isRightNetwork)
           return;
@@ -350,6 +352,15 @@ function PageMainField() {
             if (parseInt(totalSupply) < parseInt(maxMintedAmount)) {
               return (
                 <div>
+                  <MintedCounter>
+                    {(() => {
+                      if (totalSupply == -1 || maxMintedAmount == -1) {
+                        return "0/0 minted";
+                      } else {
+                        return `${totalSupply}/${maxMintedAmount} Minted`;
+                      }
+                    })()}
+                  </MintedCounter>
                   <MetamaskButtonDisplay />
                   <PriceText>{`Price : ${WebsiteParamaters.NftUnitPrice} ${WebsiteParamaters.CurrencyName}`}</PriceText>
                   <QuantityText>Quantity</QuantityText>
@@ -371,6 +382,15 @@ function PageMainField() {
             } else {
               return (
                 <div>
+                  <MintedCounter>
+                    {(() => {
+                      if (totalSupply == -1 || maxMintedAmount == -1) {
+                        return "0/0 minted";
+                      } else {
+                        return `${totalSupply}/${maxMintedAmount} Minted`;
+                      }
+                    })()}
+                  </MintedCounter>
                   <SoldOutText>SOLD OUT</SoldOutText>
                   <OpenSeaButton>Buy on OpenSea</OpenSeaButton>);
                 </div>
