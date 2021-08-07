@@ -3,7 +3,7 @@ import { AppContext } from "../pages/index.js";
 
 import styled from "styled-components";
 
-import PixelmanRecordHash from "../public/JsonFiles/hash_pman.json";
+import BabySealRecordHash from "../public/JsonFiles/hash_babyseal.json";
 import WebsiteParamaters from "../public/JsonFiles/website_parameters.json";
 
 const RecordTableContainer = styled.table`
@@ -84,7 +84,7 @@ function RecordTable() {
   return (
     <RecordTableContainer>
       <TableRowHead>
-        <TableRowHeadId>PIXELMAN ID</TableRowHeadId>
+        <TableRowHeadId>BABYSEAL ID</TableRowHeadId>
         <TableRowHeadHash>SHA-256 HASH</TableRowHeadHash>
         <TableRowHeadImageLink>IPFS LINK</TableRowHeadImageLink>
       </TableRowHead>
@@ -92,11 +92,11 @@ function RecordTable() {
         if (totalSupply < 0) return;
         let tempArray = [];
 
-        PixelmanRecordHash;
+        BabySealRecordHash;
         for (let i = 0; i < totalSupply; i++) {
           tempArray.push([
             `${i}`,
-            PixelmanRecordHash[i],
+            BabySealRecordHash[i],
             `${WebsiteParamaters.NftImageLink}${i}${WebsiteParamaters.NftImageExtension}`,
           ]);
         }

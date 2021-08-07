@@ -9,6 +9,7 @@ import styled from "styled-components";
 //Blockchain
 import Web3 from "web3";
 import ContractABI from "../public/JsonFiles/contractABI.json";
+import WebsiteParamaters from "../public/JsonFiles/website_parameters.json";
 
 //Components
 import RecordTable from "../components/RecordTable";
@@ -16,7 +17,7 @@ import PageMainField from "../components/PageMainField";
 import LastNftSection from "../components/LastNftSection";
 import MintTransactionModal from "../components/MintTransactionModal";
 
-import PixelmanArtGif from "../public/pman.gif";
+import BabySealArtGif from "../public/babyseal.gif";
 
 export const AppContext = React.createContext();
 
@@ -60,7 +61,7 @@ export default function Home() {
     color: #ffffff;
     font-size: 1.6em;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 40px;
   `;
 
   const SmallTitle = styled.div`
@@ -97,7 +98,7 @@ export default function Home() {
   `;
 
   const ContractLink = styled.a.attrs({
-    href: `https://polygonscan.com/address/0x14b22925305e60e0707aaa1319af09f4d2f1e646`,
+    href: `${WebsiteParamaters.PolygonscanLink}`,
     target: `_blank`,
     rel: `noreferrer`,
   })`
@@ -116,7 +117,7 @@ export default function Home() {
   let [isConnected, setConnectedState] = useState(false);
   let [accountAddress, setAccountAddress] = useState("");
   let [isRightNetwork, setIsRightNetwork] = useState(false);
-  let [totalSupply, setTotalSupply] = useState(-1);
+  let [totalSupply, setTotalSupply] = useState(10);
   let [mintModalEnabled, setMintModalEnabled] = useState(false);
   let [modalTxHash, setModalTxHash] = useState("");
 
@@ -125,7 +126,7 @@ export default function Home() {
       if (isRightNetwork && isConnected) {
         const contract = new window.web3.eth.Contract(
           ContractABI,
-          "0x14b22925305E60e0707Aaa1319aF09F4d2f1E646"
+          WebsiteParamaters.ContractAddress
         );
 
         setTotalSupply(await contract.methods.totalSupply().call());
@@ -154,8 +155,8 @@ export default function Home() {
     <AppContext.Provider value={propsTest}>
       <div className="base">
         <Head>
-          <title>PixelMan NFT&apos;s</title>
-          <link rel="shortcut icon" href="/pixel_man.ico" />
+          <title>BabySeal NFT&apos;s</title>
+          <link rel="shortcut icon" href="/babyseal.ico" />
           <link
             rel="preload"
             href="/fonts/pixelFont.ttf"
@@ -170,7 +171,7 @@ export default function Home() {
               <ArtImg>
                 <Image
                   className="introImage"
-                  src={PixelmanArtGif}
+                  src={BabySealArtGif}
                   alt="nft-item"
                 />
               </ArtImg>
@@ -182,9 +183,7 @@ export default function Home() {
             <SmallTitle>Contract Detail</SmallTitle>
             <BasicWhiteText>
               Contract |
-              <ContractLink>
-                0x14b22925305e60e0707aaa1319af09f4d2f1e646
-              </ContractLink>
+              <ContractLink>{WebsiteParamaters.ContractAddress}</ContractLink>
             </BasicWhiteText>
             <HashSection>
               <BasicWhiteText>
@@ -196,7 +195,7 @@ export default function Home() {
                 <TextArea />
               </TextAreaContainer>
             </HashSection>
-            <SmallTitle>PixelMan Record</SmallTitle>
+            <SmallTitle>BabySeal Record</SmallTitle>
             <RecordTable />
           </PageBody>
           <MintTransactionModal />

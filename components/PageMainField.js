@@ -316,12 +316,15 @@ function PageMainField() {
         WebsiteParamaters.ContractAddress
       );
 
-      const nftFixedPrice = 1;
       await contract.methods
         .mint(quantity)
         .send({
           from: `${accountAddress}`,
-          value: (quantity * nftFixedPrice * 10 ** 18).toString(),
+          value: (
+            quantity *
+            parseInt(WebsiteParamaters.NftUnitPrice) *
+            10 ** 18
+          ).toString(),
         })
         .on("receipt", (events) => {
           setModalTxHash(events.transactionHash);
@@ -334,15 +337,15 @@ function PageMainField() {
 
   return (
     <PageIntro>
-      <PageName>PixelMan NFT&apos;s</PageName>
+      <PageName>BabySeal NFT&apos;s</PageName>
       <PresentationText>
-        PixelMan is a collection of NFTs - unique digital collectibles, swimming
-        on the Ethereum Blockchain. 3350 pixelmens have been programmatically
-        generated from a large amount of combinations, each with unique
-        characteristics and different traits.
+        Baby Seal is a collection of NFTs - unique digital collectibles,
+        swimming on the Polygon Blockchain. 10 000 seals have been
+        programmatically generated from a ocean of combinations, each with
+        unique characteristics and different traits.
       </PresentationText>
       <MarketingText>
-        Own a PixelMan and raise the crypto revolution.
+        Own a Baby Seal and surf the crypto revolution.
       </MarketingText>
       {(() => {
         if ((totalSupply == -1 || maxMintedAmount == -1) && isRightNetwork)

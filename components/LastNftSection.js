@@ -17,7 +17,7 @@ const LastNftTitle = styled.div`
 const LastNftContainer = styled.div`
   margin-top: 30px;
   width: 100%;
-  display: flex;
+  display: ${(props) => (parseInt(props.state) < 10 ? "none" : "flex")};
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -75,7 +75,7 @@ function LastNftSection() {
   const { totalSupply } = React.useContext(AppContext);
 
   return (
-    <LastNftContainer>
+    <LastNftContainer state={totalSupply}>
       <LastNftTitle>Last 10 Minted</LastNftTitle>
       <LastNftGrid>
         {useEffect(() => {
