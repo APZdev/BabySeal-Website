@@ -340,9 +340,9 @@ function PageMainField() {
       <PageName>BabySeal NFT&apos;s</PageName>
       <PresentationText>
         Baby Seal is a collection of NFTs - unique digital collectibles,
-        swimming on the Polygon Blockchain. 10 000 seals have been
-        programmatically generated from a ocean of combinations, each with
-        unique characteristics and different traits.
+        swimming on the {WebsiteParamaters.NetworkName} Blockchain. 10 000 seals
+        have been programmatically generated from a ocean of combinations, each
+        with unique characteristics and different traits.
       </PresentationText>
       <MarketingText>
         Own a Baby Seal and surf the crypto revolution.

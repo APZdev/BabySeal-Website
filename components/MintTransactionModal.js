@@ -77,7 +77,7 @@ const TransactionHashText = styled.div`
 
 const TransactionHashLink = styled.a`
   color: #cfe7ff;
-  font-size: 1.2em;
+  font-size: 100%;
   font-weight: bold;
   margin-top: 20px;
   transition: 0.25s;
