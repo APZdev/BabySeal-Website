@@ -98,7 +98,7 @@ export default function Home() {
   `;
 
   const ContractLink = styled.a.attrs({
-    href: `${WebsiteParamaters.PolygonscanLink}`,
+    href: `${WebsiteParamaters.ContractLink}`,
     target: `_blank`,
     rel: `noreferrer`,
   })`

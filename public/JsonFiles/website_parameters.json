@@ -1,14 +1,14 @@
 {
-  "ContractAddress": "0x5f83694ba576840129fa0aff33702a1577a3c2a9",
-  "NetworkId": "137",
-  "NetworkName": "Polygon",
-  "NftUnitPrice": "20",
-  "CurrencyName": "Matic",
-  "NftImageLink": "https://ipfs.io/ipfs/QmZ9yCYeRXVuzzVqZ36obX4TKqDjqtfAfDQ7EMmdK4Cnr4/",
+  "ContractAddress": "0x595C962c5451bCd5D70c6596EbbAF1AfFFE769F4",
+  "NetworkId": "1",
+  "NetworkName": "Ethereum",
+  "NftUnitPrice": "0.025",
+  "CurrencyName": "ETH",
+  "NftImageLink": "https://ipfs.io/ipfs/QmYTd3o4WfJGJ3tSLqdoHefefSP8GxJKGxAVSZjNKtruvQ/",
   "NftImageExtension": ".png",
-  "NftOpenseaLink": "https://opensea.io/assets/matic/0x14b22925305e60e0707aaa1319af09f4d2f1e646/",
-  "NftStorageOpensea": "https://opensea.io/account?search[sortBy]=CREATED_DATE&search[sortAscending]=false",
+  "NftOpenseaLink": "https://opensea.io/assets/0x595C962c5451bCd5D70c6596EbbAF1AfFFE769F4/",
+  "NftStorageOpensea": "https://opensea.io/account/babysealnft?search[sortBy]=CREATED_DATE&search[sortAscending]=false",
   "TwitterLink": "https://twitter.com/BabySealNFT",
-  "PolygonscanLink": "https://polygonscan.com/address/0x5f83694ba576840129fa0aff33702a1577a3c2a9",
-  "OpenseaLink": "https://opensea.io/collection/baby-seal"
+  "ContractLink": "https://etherscan.io/address/0x595c962c5451bcd5d70c6596ebbaf1afffe769f4",
+  "OpenseaLink": "https://opensea.io/collection/babysealnft"
 }

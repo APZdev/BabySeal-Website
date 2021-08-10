@@ -206,7 +206,7 @@ const SocialsContainer = styled.div`
 
 const socialImages = [
   [TwitterLogo, WebsiteParamaters.TwitterLink],
-  [PolygonLogo, WebsiteParamaters.PolygonscanLink],
+  [PolygonLogo, WebsiteParamaters.ContractLink],
   [OpenseaLogo, WebsiteParamaters.OpenseaLink],
 ];
 
@@ -322,7 +322,7 @@ function PageMainField() {
           from: `${accountAddress}`,
           value: (
             quantity *
-            parseInt(WebsiteParamaters.NftUnitPrice) *
+            parseFloat(WebsiteParamaters.NftUnitPrice) *
             10 ** 18
           ).toString(),
         })

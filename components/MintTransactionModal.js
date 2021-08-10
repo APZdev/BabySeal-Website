@@ -72,7 +72,20 @@ const TransactionHashText = styled.div`
   color: #ffffff;
   font-size: 0.75em;
   font-weight: bold;
+  margin-top: 30px;
+`;
+
+const TransactionHashLink = styled.a`
+  color: #cfe7ff;
+  font-size: 1.2em;
+  font-weight: bold;
   margin-top: 20px;
+  transition: 0.25s;
+
+  &:hover {
+    transition: 0.25s;
+    color: #acd6ff;
+  }
 `;
 
 const OpenseaModalButton = styled.div`
@@ -112,7 +125,7 @@ const RightArrowImageContainer = styled.div`
 `;
 
 const InformatonText = styled.div`
-  color: #9c9c9c;
+  color: #e8e8e8;
   font-size: 0.8em;
   font-weight: bold;
   font-style: italic;
@@ -137,7 +150,12 @@ function MintTransactionModal() {
           ></Image>
         </ModalIconContainer>
         <SuccessfulText>Transaction success !</SuccessfulText>
-        <TransactionHashText>TxHash : {modalTxHash}</TransactionHashText>
+        <TransactionHashText>
+          TxHash :{" "}
+          <TransactionHashLink href={`https://etherscan.io/tx/${modalTxHash}`}>
+            {modalTxHash}
+          </TransactionHashLink>
+        </TransactionHashText>
         <OpenseaModalButton
           onClick={() =>
             window.open(WebsiteParamaters.NftStorageOpensea, "_blank")
