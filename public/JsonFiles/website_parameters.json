@@ -2,7 +2,7 @@
   "ContractAddress": "0x595C962c5451bCd5D70c6596EbbAF1AfFFE769F4",
   "NetworkId": "1",
   "NetworkName": "Ethereum",
-  "NftUnitPrice": "0.025",
+  "NftUnitPrice": "0.01",
   "CurrencyName": "ETH",
   "NftImageLink": "https://ipfs.io/ipfs/QmYTd3o4WfJGJ3tSLqdoHefefSP8GxJKGxAVSZjNKtruvQ/",
   "NftImageExtension": ".png",
