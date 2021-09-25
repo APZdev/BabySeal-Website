@@ -13,7 +13,7 @@ import WebsiteParamaters from "../public/JsonFiles/website_parameters.json";
 import MetamaskButtonDisplay from "./MetamaskButtonDisplay";
 
 import OpenseaLogo from "../public/opensea.png";
-import PolygonLogo from "../public/polygon.png";
+import EtherscanLogo from "../public/etherscan-logo-circle.png";
 import TwitterLogo from "../public/twitter-logo.png";
 
 //Intro content
@@ -206,7 +206,7 @@ const SocialsContainer = styled.div`
 
 const socialImages = [
   [TwitterLogo, WebsiteParamaters.TwitterLink],
-  [PolygonLogo, WebsiteParamaters.ContractLink],
+  [EtherscanLogo, WebsiteParamaters.ContractLink],
   [OpenseaLogo, WebsiteParamaters.OpenseaLink],
 ];
 
